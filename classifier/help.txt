@@ -1,0 +1,14 @@
+How to use functions
+
+Dans mainpretrained:
+runpt(name, epochs=100, lr=1e-3, batch_size=32, use_model=False, epochsaver=1, log_interval=15)
+name = string = nom du fichier contenant les poids de ton modèle.
+use_model = (string A, string B) où A est le name d'un truc que t'as déjà utilisé et B est l'époque que tu veux reprendre.
+log_interval gère juste la verbosité du script.
+les autres trucs sont évidents.
+
+EX :
+>>runpt("piececlassifier", epochs=3)
+>>runpt("stepclassifier", epochs=5, use_model=("piececlassifier","2"))
+
+evaluate est assez semblable en terme de syntaxe.
